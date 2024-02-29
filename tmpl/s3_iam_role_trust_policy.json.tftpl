@@ -1,0 +1,13 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "AllowIAMUser",
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": "${s3_iam_user_arn}"
+            },
+            "Action": "sts:AssumeRole"
+        }
+    ]
+}
