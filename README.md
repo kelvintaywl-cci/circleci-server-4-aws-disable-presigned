@@ -5,6 +5,16 @@ This Terraform stack helps you "migrate" to disabling presigned URLs for your Ci
 Specifically, this is meant for if you had opted to use IAM user (access key + secret access key) for authentication.
 Ref: https://circleci.com/docs/server/v4.3/installation/phase-1-prerequisites/#set-up-authentication-aws
 
+For inputs (variables), here is an example:
+
+```
+# terraform.tfvars file
+aws_region       = "ap-south-1"
+aws_s3_bucket_name   = "kelvintaywl-server4-tf"
+aws_s3_iam_user_name  = "kelvintaywl-server4-tf-s3"
+aws_s3_iam_role_name = "kelvintaywl-server4-tf-s3-role"
+```
+
 ## Notes
 
 This was tested on a CircleCI Server 4.3.x installation on AWS.
