@@ -15,6 +15,23 @@ aws_s3_iam_user_name  = "kelvintaywl-server4-tf-s3"
 aws_s3_iam_role_name = "kelvintaywl-server4-tf-s3-role"
 ```
 
+The output will print out how the Helm values can be modified.
+Note the odd quotations; Please remove them when applying to your values YAML file.
+
+```
+# example
+Outputs:
+
+aws_s3_iam_role_arn = "arn:aws:iam::123456789012:role/kelvintaywl-server4-tf-s3-role"
+helm_values_to_modify = <<EOT
+"object_storage":
+  "s3":
+    "presigned": false
+    "storageRole": "arn:aws:iam::123456789012:role/kelvintaywl-server4-tf-s3-role"
+
+EOT
+```
+
 ## Notes
 
 This was tested on a CircleCI Server 4.3.x installation on AWS.
