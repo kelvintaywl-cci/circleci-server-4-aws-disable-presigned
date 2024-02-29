@@ -42,7 +42,7 @@ resource "aws_iam_role_policy" "s3_iam_role_policy" {
 }
 
 resource "aws_iam_policy" "allow_assume_role" {
-  name = "allow-assume-${aws_iam_role.s3_iam_role.name}"
+  name        = "allow-assume-${aws_iam_role.s3_iam_role.name}"
   description = "Allow assuming of role: ${aws_iam_role.s3_iam_role.name}"
   policy = templatefile(
     "${path.module}/tmpl/s3_iam_user_policy_allowassume.json.tftpl",
