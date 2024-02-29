@@ -61,4 +61,5 @@ No modules.
 | Name | Description |
 |------|-------------|
 | <a name="output_aws_s3_iam_role_arn"></a> [aws\_s3\_iam\_role\_arn](#output\_aws\_s3\_iam\_role\_arn) | n/a |
+| <a name="output_helm_values_to_modify"></a> [helm\_values\_to\_modify](#output\_helm\_values\_to\_modify) | Update your Helm values with these modifications |
 <!-- END_TF_DOCS -->
