@@ -33,6 +33,8 @@ resource "aws_iam_role_policy" "s3_iam_role_policy" {
   name = var.aws_s3_iam_role_name
   role = aws_iam_role.s3_iam_role.id
 
+  # NOTE: this is a copy of the policy.json seen for Server 4.3 docs:
+  # https://circleci.com/docs/server/v4.3/installation/phase-1-prerequisites/#set-up-authentication-aws
   policy = templatefile(
     "${path.module}/tmpl/s3_iam_role_policy.json.tftpl",
     {
