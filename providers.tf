@@ -13,8 +13,7 @@ provider "aws" {
   default_tags {
     tags = {
       # IMPORTANT: please modify as needed!
-      "owner" : "kelvin@circleci.com"
-      "team" : "customer_engineering"
+      "owner" : "me@acme.com"
     }
   }
 }
